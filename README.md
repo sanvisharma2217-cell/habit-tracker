@@ -1,71 +1,116 @@
-# Getting Started with Create React App
+# 🌱 Habit Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **Automate your discipline**. 
 
-## Available Scripts
+A clean, modern and interactive **Habit Tracker web application built with React.js**.  
+Create your habits, mark them as completed, and instantly see your daily progress.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ➕ **Add Habits** — Quickly create new habits you want to build.
+- ✅ **Track Completion** — Mark habits as completed with a single click.
+- 📊 **Today's Progress** — See how many habits you've completed today.
+- 📈 **Progress Percentage** — Get an instant visual representation of your progress.
+- 💬 **Motivational Feedback** — Receive encouraging messages based on your progress.
+- 🗑️ **Delete Habits** — Remove habits you no longer want to track.
+- 🎨 **Clean & Modern UI** — Simple, responsive and user-friendly interface.
+- ⚡ **Interactive Experience** — Progress updates instantly whenever a habit changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🖥️ Application Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Habit Tracker provides a simple dashboard where everything is available at a glance.
 
-### `npm run build`
+### 🌱 Header
+A clear introduction to the application with the message:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**"Automate your discipline"**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ➕ Add Habit
+Enter the name of a habit and click **Add Habit** to add it to your tracker.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📊 Today's Progress
+The progress section displays:
 
-### `npm run eject`
+- Completed habits
+- Total habits
+- Completion percentage
+- Visual progress bar
+- Motivational feedback
+- The basic formula used is:
+Progress Percentage = (Completed Habits / Total Habits) × 100
+-For example:
+Completed Habits = 3
+Total Habits = 5
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Progress = ** (3 / 5) × 100
+         = 60%**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**3 / 5 completed — 60%**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📋 My Habits
+All created habits appear in an organized list.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Each habit includes:
 
-## Learn More
+- ☑️ Completion checkbox
+- 📝 Habit name
+- 🗑️ Delete button
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚛️ React Concepts Used
 
-### Code Splitting
+This project was built to practice fundamental React concepts and understand how state-driven interfaces work.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `useState`
 
-### Analyzing the Bundle Size
+Used to store and update the list of habits.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧠 How It Works
 
-### Making a Progressive Web App
+The Habit Tracker follows a simple and interactive state-driven workflow.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```text
+User enters a habit
+        ↓
+Clicks "Add Habit"
+        ↓
+New habit is added to the habits list
+        ↓
+Habit appears under "My Habits"
+        ↓
+User marks a habit as completed
+        ↓
+Completed habits are counted
+        ↓
+Progress percentage is calculated
+        ↓
+Progress bar and message update automatically
 
-### Advanced Configuration
+## 📊 Progress Calculation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The Habit Tracker automatically calculates the user's daily progress based on completed habits.
 
-### Deployment
+The calculation works by comparing the number of completed habits with the total number of habits.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```text
+Completed Habits
+        ↓
+Count completed habits
+        ↓
+Count total habits
+        ↓
+Calculate completion percentage
+        ↓
+Update progress bar
+        ↓
+Display percentage and motivational message
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# habit-tracker" 
+
+```js
+const [habits, setHabits] = useState([]);
