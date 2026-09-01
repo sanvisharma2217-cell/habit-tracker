@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f5ff;
+  color: #17213d;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.tracker {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  padding: 45px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 22px;
+  color: #667085;
+  margin: 12px 0 40px;
+}
+
+/* Form */
+
+.habit-form {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.habit-input {
+  flex: 1;
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid #e1e4ec;
+  border-radius: 12px;
+  outline: none;
+}
+
+.habit-input:focus {
+  border-color: #5b5bf7;
+}
+
+.add-button {
+  padding: 0 35px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: #5b5bf7;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #4949e8;
+}
+
+/* Progress */
+
+.progress {
+  padding: 30px;
+  margin-bottom: 35px;
+  border: 1px solid #e4e6f0;
+  border-radius: 18px;
+  background: #fafaff;
+}
+
+.progress h2 {
+  margin-top: 0 0 25px;
+  font-size: 30px;
+}
+
+.progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.progress-text {
+  margin: 0 0 15px;
+  font-size: 21px;
+  
+}
+
+.progress-bar {
+  width: 600px;
+  max-width: 100%;
+  height: 18px;
+  background: #e2e4ec;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #5b5bf7;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.percentage {
+  font-size: 45px;
+  font-weight: bold;
+  color: #5b5bf7;
+}
+
+/* Habits */
+
+.habits {
+  padding: 30px;
+  border: 1px solid #e4e6f0;
+  border-radius: 18px;
+}
+
+.habits h2 {
+  margin-top: 0;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.habit-item input {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.habit-name {
+  flex: 1;
+  margin-left: 15px;
+  font-size: 21px;
+}
+
+.delete-button {
+  padding: 10px 18px;
+  font-size: 16px;
+  color: #e63946;
+  background: #fff0f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #ffe0e2;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .tracker {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .habit-form {
+    flex-direction: column;
+  }
+
+  .add-button {
+    min-width: 190px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #5b5bf7;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .add-button:hover{
+    background: #4949e8;
+  }
+}
